@@ -1,0 +1,139 @@
+body {
+    margin:0;
+}
+
+.mySideNav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #d1bdff;
+    overflow-x: hidden;
+    padding-top: 40px;
+    transition: 0.5s;
+}
+
+    .mySideNav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 17px;
+        color: black;
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+        .mySideNav a:hover {
+            color: #7063A5;
+            text-decoration:none;
+        }
+
+        .mySideNav .closeBtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            text-decoration:none;
+        }
+
+.openBtn {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.fb {       
+    color:#1778F2;
+}
+.lk {
+    background-color: #007bb5;
+    color: white;
+}
+
+.hello {
+    font-size: 50px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    text-align-last: center;
+}
+
+
+.purple {
+    background-color: #7063A5;
+    font-family: 'Montserrat', sans-serif;
+    padding: 50px;
+}
+
+.blue {
+    /* transition: margin-left 0.5s; */
+    background-color: #13BDAC;
+    font-family: 'Montserrat', sans-serif;
+    padding: 50px;
+}
+
+.lightgreen {
+    background-color: #A2DD85;
+    font-family: 'Montserrat', sans-serif;
+    padding: 50px;
+}
+
+.yellow {
+    background-color: #E9F59A;
+    font-family: 'Montserrat', sans-serif;
+    padding: 50px;
+}
+
+.cv {
+    margin:30px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    background-color: #13BDAC;
+    color:black;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.social {
+    margin:10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contacts {
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;    
+}
+
+.back {
+    background-color: #B8EBE6;
+}
+
+.cv:hover {
+    color:black;
+    background-color:#E9F59A;
+    text-decoration:none;
+}
+
+/* .personal {
+
+} */
+
+.border {
+    border: 4px dotted black;
+    font-size: 20px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.flx {
+    display: flex;
+    justify-content: center;
+    background-color: #d1bdff;
+}
+
+.imagem {
+    width: 100%;
+}
+/* header {
+    background-image: url('images/iconscode.jpg');
+} */
