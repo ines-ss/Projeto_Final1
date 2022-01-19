@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    
+    <style>
+
+        table {
+
+            background-color:#D4D4D2;
+            border-spacing: 10px;
+            border: 2px solid black; 
+            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+            border-style: double;    
+            border-radius: 5px;     
+        }
+
+        
+
+        td, tr {
+            /* background-color:#f2f2f2; */
+            color: black;
+            text-align: center;
+            border: 2px groove #F9F9F9;
+            outline: 2px;
+            outline-offset: 5px;           
+            padding: 5px;
+
+            /* margin: 50px;        */
+        
+        }     
+        
+        
+        button:hover {
+           filter: brightness(70%);
+
+        }
+
+        .igual {
+            background-color:#FF9500;
+            color:black;
+        }
+
+        .numeros {
+            background-color: black;
+            color:#f2f2f2;
+            width: 100%;
+          
+        }
+
+        .simbolos {
+            background-color: #505050;
+            color:#f2f2f2;
+           
+        }
+         
+        .titulo {
+            background-color: #D4D4D2;
+            border: none;
+           
+        }
+        
+        button {
+            width: 50px;
+            height: 50px; 
+            border-style: 0 2px 0 2px black;
+            /* outline: 2px groove red;
+            outline-offset: 5px; */
+            border-radius: 5px;
+            
+        }
+    </style>
+
+    <script>
+
+        // nao permitir que a calculadora aceite mais do que um ponto
+
+        
+
+        // //ou
+
+        // let isDot = false;
+
+        // function insert(val) {
+
+        // if (val == '.' && isDot == true) {
+        // } 
+
+        // else {
+        // document.getElementById('visor').innerHTML += val;
+        // }
+
+        // }
+
+
+        //outras funcoes
+
+        // function visor(val) {
+
+
+        // if (val == '.' && isDot == true) {
+        // // quando . pela 2 ou mais x
+        // val = '';
+
+        // } else if (val == '.' && isDot == false) {
+        // // quando . pela 1X
+        // isDot = true;
+
+        // }
+
+        //     document.getElementById('visor').innerHTML += val;
+        // }
+
+        let isDot = false;
+        isNan = false
+        
+
+        function inserir(val) {
+            let x = document.getElementById('visor').innerHTML;
+            switch(val) {
+                //nao permitir mais do que um ponto
+                case '.':
+                    if (isDot == true) {
+                        val = '';
+                    }
+                    else {
+                        isDot = true;
+                    } 
+                    break;
+                case '/': 
+                        isDot = false;
+                    break;
+                case '+':
+                        isDot = false;
+                    break;
+                case '-':
+                        isDot = false;
+                    break;
+                case '*':
+                        isDot = false;
+                    break;
+
+                    //nao permitir mais do que um zero à esquerda
+                case '0':
+                        if (x[0] == '0' && x.length == 1) {
+                        val = ''; 
+                        }
+                        break;
+
+                    //resolver o NaN
+                case '=':
+                    if (isNan == true) {
+                        val = '';
+                    }
+            }
+                
+            document.getElementById('visor').innerHTML += val;
+        }
+
+
+
+
+            function igual() {
+            let val = document.getElementById('visor').innerHTML;
+            
+            document.getElementById('visor').innerHTML = Math.round((parseFloat(eval(val))*1000))/1000;
+        }
+
+        function limpar() {
+            
+            document.getElementById('visor').innerHTML = '';
+            isDot = false;
+        }
+
+        function apagar() {
+            let val = document.getElementById('visor').innerHTML;
+                document.getElementById('visor').innerHTML = val.substr(0,val.length-1);
+            // document.getElementById('visor').innerHTML = val.pop();
+        }
+
+
+
+    </script>
+</head>
+<body>
+    
+<table>
+
+        <tr>
+            <th colspan="2"><i class="fas fa-calculator-alt"></i>MyCalculator</th>
+            <th colspan="2"> </th>
+        </tr>
+        <tr>
+            <td colspan="4">
+            <div id="visor" style="background-color:#b2d582; border-color: rgb(112, 112, 112); height: 20px; padding: 5px;"></div></td>
+          
+        </tr>
+        <tr>
+            <td><button type="button" onclick="inserir('(')">&lpar;</button></td>
+            <td><button type="button" onclick="inserir(')')">&rpar;</button></td>
+            <td><button type="button" onclick="limpar()">C</button></td>
+            <td><button type="button" onclick="apagar()">&lArr;</button></td>
+        </tr>
+        <tr>
+            <td><button class="numeros" type="button" onclick="inserir(7)">7</button></td>
+            <td><button class="numeros" type="button" onclick="inserir(8)">8</button></td>
+            <td><button class="numeros" type="button" onclick="inserir(9)">9</button></td>
+            <td><button class="simbolos" type="button" onclick="inserir('/')">&divide;</button></td>
+        </tr>
+        <tr>
+            <td><button class="numeros" type="button" onclick="inserir(4)">4</button></td>
+            <td><button class="numeros" type="button" onclick="inserir(5)">5</button></td>
+            <td><button class="numeros" type="button" onclick="inserir(6)">6</button></td>
+            <td><button class="simbolos" type="button" onclick="inserir('*')">&times;</button></td>
+        </tr>
+        <tr>
+            <td><button class="numeros" type="button" onclick="inserir(1)">1</button></td>
+            <td><button class="numeros" type="button" onclick="inserir(2)">2</button></td>
+            <td><button class="numeros" type="button" onclick="inserir(3)">3</button></td>
+            <td><button class="simbolos" type="button" onclick="inserir('-')">&minus;</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="inserir('.')">&comma;</button></td>
+            <td><button class="numeros" type="button" onclick="inserir(0)">0</button></td>
+            <td><button class="igual" type="button" onclick="igual()">&equals;</button></td>
+            <td><button class="simbolos" type="button" onclick="inserir('+')">&plus;</button></td>
+        </tr>
+    </table>
+    
+</body>
+</html>

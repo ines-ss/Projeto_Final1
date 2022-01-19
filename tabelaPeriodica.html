@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+    <style>
+
+    .naoMetais {
+        background-color: #7FE817;
+
+    }
+
+    .naoMetais:hover {
+        background-color: rgba(127, 232, 23, o.5);
+        transform: scale(1.5);
+        transition: 2s;
+    }
+
+    .metaisAlcalinos {
+        background-color: #FBB917;
+
+    }
+    .metaisAlcalinos:hover {
+        background-color: rgb(251, 185, 23, 0.5);
+        transform: scale(1.5);
+        transition: 2s;
+    }
+
+
+    .semiMetais {
+        background-color: #3B9C9C;
+
+    }
+
+    .semiMetais:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        transform: scale(1.5);
+        transition: 2s;
+    }
+
+    .outrosMetais {
+        background-color: #AFDCEC;
+
+    }
+
+    .outrosMetais:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        transform: scale(1.5);
+        transition: 2s;
+    }
+    
+    .lantanideos {
+        background-color: #7DFDFE;
+        margin: 100px;
+
+    }
+
+    .lantanideos:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        transform: scale(1.5);
+        transition: 2s;
+    }
+
+    .gasesNobres {
+        background-color: #306EFF;
+    }
+
+    .gasesNobres:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        transform: scale(1.5);
+        transition: 2s;
+    }
+
+    .metaisAlcTerrosos {
+        background-color: #ffea32;
+
+    }
+
+    .metaisAlcTerrosos:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        transform: scale(1.5);
+        transition: 2s;
+    }
+
+    
+    .halogenios {
+        background-color: #82CAFF;
+
+    }
+
+    .halogenios:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        transform: scale(1.5);
+        transition: 2s;
+    }
+
+    .metaisTransicao {
+        background-color: #C24641;
+
+    }
+
+    .metaisTransicao:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        transform: scale(1.5);
+        transition: 2s;
+    }
+
+    .actinidios {
+        background-color: #E6A9EC;
+
+    }
+
+    .actinidios:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        transform: scale(1.5);
+        transition: 2s;
+    }
+    
+    .tabPeriodica {
+        width:70%;
+        border-spacing: 5px;
+        font-family: 'Comfortaa', cursive;
+        cursor: pointer;
+        margin-left: 15%;
+        
+    } 
+
+    h1 {
+        font-family: 'Comfortaa', cursive;
+        text-align: center;
+    }
+
+    td {
+        border-radius: 2px;
+        padding: 5px;
+        height: auto;
+    }
+
+    .numeros {
+        font-size:x-small;
+    }
+
+    .letras {
+        font-size: large;
+        text-align: center;
+    }
+
+    .mostrar {
+        background-color: black;
+    }
+
+    .esconder {
+        display: none;
+    }
+
+    .info {
+        font-size: xx-small;
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0;
+        border-radius: 2px;
+    }
+
+    th {
+        font-weight: bold;
+        font-size: large;
+        text-align: center;
+    }
+
+    
+</style>
+    
+    
+<script>
+    function mostrar(n) {
+        document.getElementById(n).style.display = 'block';
+    }
+
+    function ocultar(n) {
+        document.getElementById(n).style.display = 'none';
+    }
+
+</script>
+
+
+
+</head>
+<body>
+
+    <h1>Tabela Periódica</h1><br />
+
+<table class="tabPeriodica">
+
+    <tr>
+        <td class="naoMetais" onmouseover="mostrar('H')" onmouseout="ocultar('H')"><div class="numeros">1</div><div class="letras">H</div></td>
+        <td></td>
+        <td colspan="10" rowspan="3" style="padding: 0;">
+            <div id="He" class="esconder">
+            <table class="info gasesNobres">
+                <tr>
+                    <th>Hidrogénio</th>
+                </tr>
+                <tr>
+                    <td>Símbolo</td>
+                    <td>H</td>
+                </tr>
+                <tr>
+                    <td>Número Atómico</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Massa Atómica</td>
+                    <td>1.008</td>
+                </tr>
+                <tr>
+                    <td>Configuração eletrónica</td>
+                    <td>1s<sup>1</sup></td>
+                </tr>
+            </table>  
+        </div>
+        
+        <div id="H" class="esconder">Hélio</div>
+        <div id="Li" class="esconder">Lítio</div>
+        <div id="Be" class="esconder">Berílio</div>
+        <div id="B" class="esconder">Boro</div>
+        <div id="C" class="esconder">Carbono</div>
+        <div id="N" class="esconder">Nitrogéneo</div>
+        <div id="O" class="esconder">Oxigénio</div>
+        <div id="F" class="esconder">Flúor</div>
+        <div id="Ne" class="esconder">Neónio</div>
+        <div id="Na" class="esconder">Sódio</div>
+        <div id="Mg" class="esconder">Magnésio</div>
+        <div id="Al" class="esconder">Alumínio</div>
+        <div id="Si" class="esconder">Silício</div>
+        <div id="P" class="esconder">Fósforo</div>
+        <div id="S" class="esconder">Enxofre</div>
+        <div id="Cl" class="esconder">Cloro</div>
+        <div id="Ar" class="esconder">Argónio</div>
+        <div id="K" class="esconder">Potássio</div>
+        <div id="Ca" class="esconder">Cálcio</div>
+        <div id="Sc" class="esconder">Escândio</div>
+        <div id="Ti" class="esconder">Titânio</div>
+        <div id="V" class="esconder">Vanádio</div>
+        <div id="Cr" class="esconder">Cromo</div>
+        <div id="Mn" class="esconder">Manganês</div>
+        <div id="Fe" class="esconder">Neónio</div>
+        <div id="Co" class="esconder">Cobalto</div>
+        <div id="Ni" class="esconder">Níquel</div>
+        <div id="Cu" class="esconder">Cobre</div>
+        <div id="Zn" class="esconder">Zinco</div>
+        <div id="Ga" class="esconder">Gálio</div>
+        <div id="Ge" class="esconder">Germânio</div>
+        <div id="As" class="esconder">Arsénio</div>
+        <div id="Se" class="esconder">Selénio</div>
+        <div id="Br" class="esconder">Brômio</div>
+        <div id="Kr" class="esconder">Criptónio</div>
+        <div id="Rb" class="esconder">Rubídio</div>
+        <div id="Sr" class="esconder">Estrôncio</div>
+        <div id="Y" class="esconder">Ítrio</div>
+        <div id="Zr" class="esconder">Zircónio</div>
+        <div id="Nb" class="esconder">Nióbio</div>
+        <div id="Mo" class="esconder">Molibdénio</div>
+        <div id="Tc" class="esconder">Tecnécio</div>
+        <div id="Ru" class="esconder">Ruténio</div>
+        <div id="Rh" class="esconder">Ródio</div>
+        <div id="Pd" class="esconder">Paládio</div>
+        <div id="Ag" class="esconder">Prata</div>
+        <div id="Cd" class="esconder">Cádmio</div>
+        <div id="In" class="esconder">Índio</div>
+        <div id="Sn" class="esconder">Estanho</div>
+        <div id="Sb" class="esconder">Atimónio</div>
+        <div id="Te" class="esconder">Terúlio</div>
+        <div id="I" class="esconder">Iodo</div>
+        <div id="Xe" class="esconder">Xenónio</div>
+        <div id="Cs" class="esconder">Césio</div>
+        <div id="Ba" class="esconder">Bário</div>
+        <div id="La" class="esconder">Lantânio</div>
+        <div id="Ce" class="esconder">Cério</div>
+        <div id="Pr" class="esconder">Praseodímio</div>
+        <div id="Nd" class="esconder">Neodímio</div>
+        <div id="Pm" class="esconder">Promécio</div>
+        <div id="Sm" class="esconder">Samário</div>
+        <div id="Eu" class="esconder">Európio</div>
+        <div id="Gd" class="esconder">Gadolínio</div>
+        <div id="Tb" class="esconder">Térbio</div>
+        <div id="Dy" class="esconder">Disprósio</div>
+        <div id="Ho" class="esconder">Hólmio</div>
+        <div id="Er" class="esconder">Érbio</div>
+        <div id="Tm" class="esconder">Túlio</div>
+        <div id="Yb" class="esconder">Itérbio</div>
+        <div id="Lu" class="esconder">Lutécio</div>
+        <div id="Hf" class="esconder">Háfnio</div>
+        <div id="Ta" class="esconder">Tântalo</div>
+        <div id="W" class="esconder">Tungsténio</div>
+        <div id="Re" class="esconder">Rénio</div>
+        <div id="Os" class="esconder">Ósmio</div>
+        <div id="Ir" class="esconder">Irídio</div>
+        <div id="Pt" class="esconder">Platina</div>
+        <div id="Au" class="esconder">Ouro</div>
+        <div id="Hg" class="esconder">Mercúrio</div>
+        <div id="Tl" class="esconder">Tálio</div>
+        <div id="Pb" class="esconder">Chumbo</div>
+        <div id="Bi" class="esconder">Bismuto</div>
+        <div id="Po" class="esconder">Polónio</div>
+        <div id="At" class="esconder">Ástato</div>
+        <div id="Rn" class="esconder">Radónio</div>
+        <div id="Fr" class="esconder">Frâncio</div>
+        <div id="Ra" class="esconder">Rádio</div>
+        <div id="Ac" class="esconder">Actínio</div>
+        <div id="Th" class="esconder">Tório</div>
+        <div id="Pa" class="esconder">Protactínio</div>
+        <div id="U" class="esconder">Urânio</div>
+        <div id="Np" class="esconder">Netúnio</div>
+        <div id="Pu" class="esconder">Plutónio</div>
+        <div id="Am" class="esconder">Amerício</div>
+        <div id="Cm" class="esconder">Cúrio</div>
+        <div id="Bk" class="esconder">Berquélio</div>
+        <div id="Cf" class="esconder">Califórnio</div>
+        <div id="Es" class="esconder">Einsténio</div>
+        <div id="Fm" class="esconder">Férmio</div>
+        <div id="Md" class="esconder">Mendelévio</div>
+        <div id="No" class="esconder">Nobélio</div>
+        <div id="Lr" class="esconder">Laurêncio</div>
+        <div id="Rf" class="esconder">Rutherfórdio</div>
+        <div id="Db" class="esconder">Dúbnio</div>
+        <div id="Sg" class="esconder">Seabórgio</div>
+        <div id="Bh" class="esconder">Bóhrio</div>
+        <div id="Hs" class="esconder">Hássio</div>
+        <div id="Mt" class="esconder">Meitnério</div>
+        <div id="Ds" class="esconder">Darmstádio</div>
+        <div id="Rg" class="esconder">Roentgénio</div>
+        <div id="Cn" class="esconder">Copernício</div>
+        <div id="Nh" class="esconder">Nihónio</div>
+        <div id="Fl" class="esconder">Fleróvio</div>
+        <div id="Mc" class="esconder">Moscóvio</div>
+        <div id="Lv" class="esconder">Livermório</div>
+        <div id="Ts" class="esconder">Tenessino</div>
+        <div id="Og" class="esconder">Oganessónio</div>
+    
+    </td>
+
+        <td colspan="5"></td>
+        <td class="gasesNobres" onmouseover="mostrar('He')" onmouseout="ocultar('He')"><div class="numeros">2</div><div class="letras">He</div></td>
+        
+    </tr>
+    
+    <tr>
+        <td class="metaisAlcalinos" onmouseover="mostrar('Li')" onmouseout="ocultar('Li')"><div class="numeros">3</div><div class="letras">Li</div></td>
+        <td class="metaisAlcTerrosos" onmouseover="mostrar('Be')" onmouseout="ocultar('Be')"><div class="numeros">4</div><div class="letras">Be</div></td>
+        <td class="semiMetais" onmouseover="mostrar('B')" onmouseout="ocultar('B')"><div class="numeros">5</div><div class="letras">B</div></td>
+        <td class="naoMetais" onmouseover="mostrar('C')" onmouseout="ocultar('C')"><div class="numeros">6</div><div class="letras">C</div></td>
+        <td class="naoMetais" onmouseover="mostrar('N')" onmouseout="ocultar('N')"><div class="numeros">7</div><div class="letras">N</div></td>
+        <td class="naoMetais" onmouseover="mostrar('O')" onmouseout="ocultar('O')"><div class="numeros">8</div><div class="letras">O</div></td>
+        <td class="halogenios" onmouseover="mostrar('F')" onmouseout="ocultar('F')"><div class="numeros">9</div><div class="letras">F</div></td>
+        <td class="gasesNobres" onmouseover="mostrar('Ne')" onmouseout="ocultar('Ne')"><div class="numeros">10</div><div class="letras">Ne</div></td>
+      
+    </tr>
+    
+    <tr>
+        <td class="metaisAlcalinos" onmouseover="mostrar('Na')" onmouseout="ocultar('Na')"><div class="numeros">11</div><div class="letras">Na</div></td>
+        <td class="metaisAlcTerrosos" onmouseover="mostrar('Mg')" onmouseout="ocultar('Mg')"><div class="numeros">12</div><div class="letras">Mg</div></td>
+        <td class="outrosMetais" onmouseover="mostrar('Al')" onmouseout="ocultar('Al')"><div class="numeros">13</div><div class="letras">Al</div></td>
+        <td class="semiMetais" onmouseover="mostrar('Si')" onmouseout="ocultar('Si')"><div class="numeros">14</div><div class="letras">Si</div></td>
+        <td class="naoMetais" onmouseover="mostrar('P')" onmouseout="ocultar('P')"><div class="numeros">15</div><div class="letras">P</div></td>
+        <td class="naoMetais" onmouseover="mostrar('S')" onmouseout="ocultar('S')"><div class="numeros">16</div><div class="letras">S</div></td>
+        <td class="halogenios" onmouseover="mostrar('Cl')" onmouseout="ocultar('Cl')"><div class="numeros">17</div><div class="letras">Cl</div></td>
+        <td class="gasesNobres" onmouseover="mostrar('Ar')" onmouseout="ocultar('Ar')"><div class="numeros">18</div><div class="letras">Ar</div></td>
+      
+    </tr>
+    
+    <tr>
+        <td class="metaisAlcalinos" onmouseover="mostrar('K')" onmouseout="ocultar('K')"><div class="numeros">19</div><div class="letras">K</div></td>
+        <td class="metaisAlcTerrosos" onmouseover="mostrar('Ca')" onmouseout="ocultar('Ca')"><div class="numeros">20</div><div class="letras">Ca</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Sc')" onmouseout="ocultar('Sc')"><div class="numeros">21</div><div class="letras">Sc</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Ti')" onmouseout="ocultar('Ti')"><div class="numeros">22</div><div class="letras">Ti</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('V')" onmouseout="ocultar('V')"><div class="numeros">23</div><div class="letras">V</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Cr')" onmouseout="ocultar('Cr')"><div class="numeros">24</div><div class="letras">Cr</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Mn')" onmouseout="ocultar('Mn')"><div class="numeros">25</div><div class="letras">Mn</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Fe')" onmouseout="ocultar('Fe')"><div class="numeros">26</div><div class="letras">Fe</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Co')" onmouseout="ocultar('Co')"><div class="numeros">27</div><div class="letras">Co</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Ni')" onmouseout="ocultar('Ni')"><div class="numeros">28</div><div class="letras">Ni</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Cu')" onmouseout="ocultar('Cu')"><div class="numeros">29</div><div class="letras">Cu</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Zn')" onmouseout="ocultar('Zn')"><div class="numeros">30</div><div class="letras">Zn</div></td>
+        <td class="outrosMetais" onmouseover="mostrar('Ga')" onmouseout="ocultar('Ga')"><div class="numeros">31</div><div class="letras">Ga</div></td>
+        <td class="semiMetais" onmouseover="mostrar('Ge')" onmouseout="ocultar('Ge')"><div class="numeros">32</div><div class="letras">Ge</div></td>
+        <td class="semiMetais" onmouseover="mostrar('As')" onmouseout="ocultar('As')"><div class="numeros">33</div><div class="letras">As</div></td>
+        <td class="naoMetais" onmouseover="mostrar('Se')" onmouseout="ocultar('Se')"><div class="numeros">34</div><div class="letras">Se</div></td>
+        <td class="halogenios" onmouseover="mostrar('Br')" onmouseout="ocultar('Br')"><div class="numeros">35</div><div class="letras">Br</div></td>
+        <td class="gasesNobres" onmouseover="mostrar('Kr')" onmouseout="ocultar('Kr')"><div class="numeros">36</div><div class="letras">Kr</div></td>
+    </tr>
+    
+    <tr>
+        <td class="metaisAlcalinos" onmouseover="mostrar('Rb')" onmouseout="ocultar('Rb')"><div class="numeros">37</div><div class="letras">Rb</div></td>
+        <td class="metaisAlcTerrosos" onmouseover="mostrar('Sr')" onmouseout="ocultar('Sr')"><div class="numeros">38</div><div class="letras">Sr</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Y')" onmouseout="ocultar('Y')"><div class="numeros">39</div><div class="letras">Y</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Zr')" onmouseout="ocultar('Zr')"><div class="numeros">40</div><div class="letras">Zr</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Nb')" onmouseout="ocultar('Nb')"><div class="numeros">41</div><div class="letras">Nb</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Mo')" onmouseout="ocultar('Mo')"><div class="numeros">42</div><div class="letras">Mo</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Tc')" onmouseout="ocultar('Tc')"><div class="numeros">43</div><div class="letras">Tc</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Ru')" onmouseout="ocultar('Ru')"><div class="numeros">44</div><div class="letras">Ru</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Rh')" onmouseout="ocultar('Rh')"><div class="numeros">45</div><div class="letras">Rh</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Pd')" onmouseout="ocultar('Pd')"><div class="numeros">46</div><div class="letras">Pd</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Ag')" onmouseout="ocultar('Ag')"><div class="numeros">47</div><div class="letras">Ag</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Cd')" onmouseout="ocultar('Cd')"><div class="numeros">48</div><div class="letras">Cd</div></td>
+        <td class="outrosMetais" onmouseover="mostrar('In')" onmouseout="ocultar('In')"><div class="numeros">49</div><div class="letras">In</div></td>
+        <td class="outrosMetais" onmouseover="mostrar('Sn')" onmouseout="ocultar('Sn')"><div class="numeros">50</div><div class="letras">Sn</div></td>
+        <td class="semiMetais" onmouseover="mostrar('Sb')" onmouseout="ocultar('Sb')"><div class="numeros">51</div><div class="letras">Sb</div></td>
+        <td class="semiMetais" onmouseover="mostrar('Te')" onmouseout="ocultar('Te')"><div class="numeros">52</div><div class="letras">Te</div></td>
+        <td class="halogenios" onmouseover="mostrar('I')" onmouseout="ocultar('I')"><div class="numeros">53</div><div class="letras">I</div></td>
+        <td class="gasesNobres" onmouseover="mostrar('Xe')" onmouseout="ocultar('Xe')"><div class="numeros">54</div><div class="letras">Xe</div></td>
+    </tr>
+    
+    <tr>
+        <td class="metaisAlcalinos" onmouseover="mostrar('Cs')" onmouseout="ocultar('Cs')"><div class="numeros">55</div><div class="letras">Cs</div></td>
+        <td class="metaisAlcTerrosos" onmouseover="mostrar('Ba')" onmouseout="ocultar('Ba')"><div class="numeros">56</div><div class="letras">Ba</div></td>
+        <td></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Hf')" onmouseout="ocultar('Hf')"><div class="numeros">72</div><div class="letras">Hf</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Ta')" onmouseout="ocultar('Ta')"><div class="numeros">73</div><div class="letras">Ta</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('W')" onmouseout="ocultar('W')"><div class="numeros">74</div><div class="letras">W</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Re')" onmouseout="ocultar('Re')"><div class="numeros">75</div><div class="letras">Re</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Os')" onmouseout="ocultar('Os')"><div class="numeros">76</div><div class="letras">Os</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Ir')" onmouseout="ocultar('Ir')"><div class="numeros">77</div><div class="letras">Ir</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Pt')" onmouseout="ocultar('Pt')"><div class="numeros">78</div><div class="letras">Pt</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Au')" onmouseout="ocultar('Au')"><div class="numeros">79</div><div class="letras">Au</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Hg')" onmouseout="ocultar('Hg')"><div class="numeros">80</div><div class="letras">Hg</div></td>
+        <td class="outrosMetais" onmouseover="mostrar('Tl')" onmouseout="ocultar('Tl')"><div class="numeros">81</div><div class="letras">Tl</div></td>
+        <td class="outrosMetais" onmouseover="mostrar('Pb')" onmouseout="ocultar('Pb')"><div class="numeros">82</div><div class="letras">Pb</div></td>
+        <td class="outrosMetais" onmouseover="mostrar('Bi')" onmouseout="ocultar('Bi')"><div class="numeros">83</div><div class="letras">Bi</div></td>
+        <td class="semiMetais" onmouseover="mostrar('Po')" onmouseout="ocultar('Po')"><div class="numeros">84</div><div class="letras">Po</div></td>
+        <td class="halogenios"  onmouseover="mostrar('At')" onmouseout="ocultar('At')"><div class="numeros">85</div><div class="letras">At</div></td>
+        <td class="gasesNobres" onmouseover="mostrar('Rn')" onmouseout="ocultar('Rn')"><div class="numeros">86</div><div class="letras">Rn</div></td>
+    </tr>
+    
+    <tr>
+        <td class="metaisAlcalinos" onmouseover="mostrar('Fr')" onmouseout="ocultar('Fr')"><div class="numeros">87</div><div class="letras">Fr</div></td>
+        <td class="metaisAlcTerrosos" onmouseover="mostrar('Ra')" onmouseout="ocultar('Ra')"><div class="numeros">88</div><div class="letras">Ra</div></td>
+        <td></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Rf')" onmouseout="ocultar('Rf')"><div class="numeros">104</div><div class="letras">Rf</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Db')" onmouseout="ocultar('Db')"><div class="numeros">105</div><div class="letras">Db</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Sg')" onmouseout="ocultar('Sg')"><div class="numeros">106</div><div class="letras">Sg</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Bh')" onmouseout="ocultar('Bh')"><div class="numeros">107</div><div class="letras">Bh</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Hs')" onmouseout="ocultar('Hs')"><div class="numeros">108</div><div class="letras">Hs</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Mt')" onmouseout="ocultar('Mt')"><div class="numeros">109</div><div class="letras">Mt</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Ds')" onmouseout="ocultar('Ds')"><div class="numeros">110</div><div class="letras">Ds</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Rg')" onmouseout="ocultar('Rg')"><div class="numeros">111</div><div class="letras">Rg</div></td>
+        <td class="metaisTransicao" onmouseover="mostrar('Cn')" onmouseout="ocultar('Cn')"><div class="numeros">112</div><div class="letras">Cn</div></td>
+        <td class="outrosMetais" onmouseover="mostrar('Nh')" onmouseout="ocultar('Nh')"><div class="numeros">113</div><div class="letras">Nh</div></td>
+        <td class="outrosMetais" onmouseover="mostrar('Fl')" onmouseout="ocultar('Fl')"><div class="numeros">114</div><div class="letras">Fl</div></td>
+        <td class="outrosMetais" onmouseover="mostrar('Mc')" onmouseout="ocultar('Mc')"><div class="numeros">115</div><div class="letras">Mc</div></td>
+        <td class="outrosMetais" onmouseover="mostrar('Lv')" onmouseout="ocultar('Lv')"><div class="numeros">116</div><div class="letras">Lv</div></td>
+        <td class="halogenios" onmouseover="mostrar('Ts')" onmouseout="ocultar('Ts')"><div class="numeros">117</div><div class="letras">Ts</div></td>
+        <td class="gasesNobres" onmouseover="mostrar('Og')" onmouseout="ocultar('Og')"><div class="numeros">118</div><div class="letras">Og</div></td>
+    </tr>
+ 
+    <tr>
+        
+        <td colspan="18"></td>
+       
+        
+    </tr>
+
+    <tr>
+        <td colspan="3"></td>
+        <td class="lantanideos" onmouseover="mostrar('La')" onmouseout="ocultar('La')"><div class="numeros">57</div><div class="letras">La</div></td>
+        <td class="lantanideos" onmouseover="mostrar('Ce')" onmouseout="ocultar('Ce')"><div class="numeros">58</div><div class="letras">Ce</div></td>
+        <td class="lantanideos" onmouseover="mostrar('Pr')" onmouseout="ocultar('Pr')"><div class="numeros">59</div><div class="letras">Pr</div></td>
+        <td class="lantanideos" onmouseover="mostrar('Nd')" onmouseout="ocultar('Nd')"><div class="numeros">60</div><div class="letras">Nd</div></td>
+        <td class="lantanideos" onmouseover="mostrar('Pm')" onmouseout="ocultar('Pm')"><div class="numeros">61</div><div class="letras">Pm</div></td>
+        <td class="lantanideos" onmouseover="mostrar('Sm')" onmouseout="ocultar('Sm')"><div class="numeros">62</div><div class="letras">Sm</div></td>
+        <td class="lantanideos" onmouseover="mostrar('Eu')" onmouseout="ocultar('Eu')"><div class="numeros">63</div><div class="letras">Eu</div></td>
+        <td class="lantanideos" onmouseover="mostrar('Gd')" onmouseout="ocultar('Gd')"><div class="numeros">64</div><div class="letras">Gd</div></td>
+        <td class="lantanideos" onmouseover="mostrar('Tb')" onmouseout="ocultar('Tb')"><div class="numeros">65</div><div class="letras">Tb</div></td>
+        <td class="lantanideos" onmouseover="mostrar('Dy')" onmouseout="ocultar('Dy')"><div class="numeros">66</div><div class="letras">Dy</div></td>
+        <td class="lantanideos" onmouseover="mostrar('Ho')" onmouseout="ocultar('Ho')"><div class="numeros">67</div><div class="letras">Ho</div></td>
+        <td class="lantanideos" onmouseover="mostrar('Er')" onmouseout="ocultar('Er')"><div class="numeros">68</div><div class="letras">Er</div></td>
+        <td class="lantanideos" onmouseover="mostrar('Tm')" onmouseout="ocultar('Tm')"><div class="numeros">69</div><div class="letras">Tm</div></td>
+        <td class="lantanideos" onmouseover="mostrar('Yb')" onmouseout="ocultar('Yb')"><div class="numeros">70</div><div class="letras">Yb</div></td>
+        <td class="lantanideos" onmouseover="mostrar('Lu')" onmouseout="ocultar('Lu')"><div class="numeros">71</div><div class="letras">Lu</div></td>
+    </tr>
+
+    <tr>
+        <td colspan="3"></td>
+        <td class="actinidios" onmouseover="mostrar('Ac')" onmouseout="ocultar('Ac')"><div class="numeros">89</div><div class="letras">Ac</div></td>
+        <td class="actinidios" onmouseover="mostrar('Th')" onmouseout="ocultar('Th')"><div class="numeros">90</div><div class="letras">Th</div></td>
+        <td class="actinidios" onmouseover="mostrar('Pa')" onmouseout="ocultar('Pa')"><div class="numeros">91</div><div class="letras">Pa</div></td>
+        <td class="actinidios" onmouseover="mostrar('U')" onmouseout="ocultar('U')"><div class="numeros">92</div><div class="letras">U</div></td>
+        <td class="actinidios" onmouseover="mostrar('Np')" onmouseout="ocultar('Np')"><div class="numeros">93</div><div class="letras">Np</div></td>
+        <td class="actinidios" onmouseover="mostrar('Pu')" onmouseout="ocultar('Pu')"><div class="numeros">94</div><div class="letras">Pu</div></td>
+        <td class="actinidios" onmouseover="mostrar('Am')" onmouseout="ocultar('Am')"><div class="numeros">95</div><div class="letras">Am</div></td>
+        <td class="actinidios" onmouseover="mostrar('Cm')" onmouseout="ocultar('Cm')"><div class="numeros">96</div><div class="letras">Cm</div></td>
+        <td class="actinidios" onmouseover="mostrar('Bk')" onmouseout="ocultar('Bk')"><div class="numeros">97</div><div class="letras">Bk</div></td>
+        <td class="actinidios" onmouseover="mostrar('Cf')" onmouseout="ocultar('Cf')"><div class="numeros">98</div><div class="letras">Cf</div></td>
+        <td class="actinidios" onmouseover="mostrar('Es')" onmouseout="ocultar('Es')"><div class="numeros">99</div><div class="letras">Es</div></td>
+        <td class="actinidios" onmouseover="mostrar('Fm')" onmouseout="ocultar('Fm')"><div class="numeros">100</div><div class="letras">Fm</div></td>
+        <td class="actinidios" onmouseover="mostrar('Md')" onmouseout="ocultar('Md')"><div class="numeros">101</div><div class="letras">Md</div></td>
+        <td class="actinidios" onmouseover="mostrar('No')" onmouseout="ocultar('No')"><div class="numeros">102</div><div class="letras">No</div></td>
+        <td class="actinidios" onmouseover="mostrar('Lr')" onmouseout="ocultar('Lr')"><div class="numeros">103</div><div class="letras">Lr</div></td>
+    </tr>
+    
+    
+
+</table>
+
+</body>
+</html>
